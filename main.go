@@ -9,10 +9,7 @@ import (
 )
 
 func main() {
-	user := os.Getenv("CONCOURSE_USER")
-	password := os.Getenv("CONCOURSE_PASSWORD")
-
-	res, err := commands.Builds(user, password)
+	res, err := commands.Builds("ci", "https://diego.ci.cf-app.com")
 	if err != nil {
 		log.Println(err)
 		os.Exit(1)

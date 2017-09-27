@@ -12,8 +12,8 @@ import (
 
 const timeDateLayout = "2006-01-02@15:04:05-0700"
 
-func Builds(user, password string) ([]string, error) {
-	target, err := rc.NewBasicAuthTarget("ci", "https://diego.ci.cf-app.com", "", false, user, password, "", false)
+func Builds(targetName, api string) ([]string, error) {
+	target, err := rc.NewNoAuthTarget("ci", "https://diego.ci.cf-app.com", "", false, "", false)
 	if err != nil {
 		return nil, err
 	}
