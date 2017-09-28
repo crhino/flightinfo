@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/crhino/flightstats/api"
+	"github.com/crhino/flightstats/commands"
 )
 
 func main() {
@@ -15,5 +16,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("%#v\n", len(res))
+	fmt.Printf("%#v\n", commands.BuildFailures(res))
 }

@@ -5,5 +5,5 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = Describe("FailurePercentages", func() {
+var _ = Describe("BuildFailures", func() {
 })
