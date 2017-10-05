@@ -2,5 +2,12 @@ package commands
 
 import "github.com/concourse/atc"
 
-func BuildFailures(builds []atc.Build) {
+type JobStats struct {
+	Name      string
+	Successes int
+	Failures  int
+}
+
+func BuildFailures(builds []atc.Build) []JobStats {
+	return nil
 }
